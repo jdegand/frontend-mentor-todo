@@ -1,0 +1,9 @@
+<div class="flex">
+  <div class="row">
+      <input [id]="item.description" type="checkbox" (change)="item.done = !item.done" [checked]="item.done" />
+      <label [for]="item.description" class="description">{{item.description}}</label>
+    </div>
+    <div>
+      <img class="x" src="../../assets/images/icon-cross.svg" (click)="remove.emit()">
+    </div> 
+</div>

@@ -1,0 +1,55 @@
+<div class="banner">
+  <div id="title">
+    <label for="addItemInput" class="heading">Todo</label> 
+    <img class="toggler" src="{{ showVar ? '../assets/images/icon-sun.svg' : '../assets/images/icon-moon.svg'}}" alt="light mode toggle" (click)="toggle()">
+  </div>
+
+</div>
+<div class="main">
+  
+<input
+  #newItem
+  placeholder="Create a new todo..."
+  (keyup.enter)="addItem(newItem.value); newItem.value = ''"
+  class="lg-text-input"
+  id="addItemInput"
+/>
+
+<ul cdkDropList (cdkDropListDropped)="drop($event)">
+  <li *ngFor="let item of items">
+    <app-item class="example-box" (remove)="remove(item)" [item]="item" cdkDrag></app-item>
+  </li>
+</ul>
+
+ <!-- items needs to be filtered based on the filters -->
+
+<div class="btn-wrapper">
+  <h4>{{items.length}} <span *ngIf="items.length === 1; else elseBlock">item</span>
+    <ng-template #elseBlock>items</ng-template></h4>
+  
+  <ul class="grid">
+    <li 
+      [class.active]="filter == 'all'"
+      (click)="filter = 'all'">
+      All
+    </li>
+
+    <li 
+      [class.active]="filter == 'active'"
+      (click)="filter = 'active'">
+      Active
+    </li>
+
+    <li 
+      [class.active]="filter == 'done'"
+      (click)="filter = 'done'">
+      Completed
+    </li>
+  </ul>
+  
+  <h4 (click)="removeAll()">Clear Completed </h4>
+</div>
+
+<h4 class="drag-text">Drag and drop to reorder list</h4>
+    
+</div>

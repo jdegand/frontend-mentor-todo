@@ -1,0 +1,141 @@
+.item {
+  padding: .5rem 0 .75rem 0;
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+.btn-wrapper {
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+}
+
+.btn {
+  /* menu buttons flexbox styles */
+  flex-basis: 49%;
+}
+
+.btn-save {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+
+}
+
+.btn-save:hover {
+  background-color: #444242;
+}
+
+.btn-save:focus {
+  background-color: #fff;
+  color: #000;
+}
+
+.checkbox-wrapper {
+  margin: .5rem 0;
+}
+
+.btn-warn {
+  background-color: #b90000;
+  color: #fff;
+  border-color: #9a0000;
+}
+
+.btn-warn:hover {
+  background-color: #9a0000;
+}
+
+.btn-warn:active {
+  background-color: #e30000;
+  border-color: #000;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  /*border-bottom: 1px solid var(--VeryLightGrayishBlue); present when dragged*/ 
+  /*margin: 10px 0; */
+}
+
+.row {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.sm-text-input {
+  width: 100%;
+  padding: .5rem;
+  border: 2px solid #555;
+  display: block;
+  box-sizing: border-box;
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+/* Custom checkboxes
+Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-buttons-and-checkboxes */
+
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 1.95em;
+  padding-top: 0.4em;
+  cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 1.25em; height: 1.25em;
+  border: 2px solid gray;
+  border-radius: 50%;
+}
+
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: url("../../assets/images/icon-check.svg");
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  background: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  transition: all .2s;
+  top: .11em;
+  left: .10em;
+  font-size: 1.3em;
+  line-height: 0.8;
+  border-radius: 50%;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 2px solid var(--BrightBlue);
+}
+
+[type="checkbox"]:checked + .description {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.x {
+  cursor: pointer;
+  margin-top: 10px;
+}
