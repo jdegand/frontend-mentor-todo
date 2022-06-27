@@ -85,3 +85,4 @@ Had to use npm install after generating a component from angular cli.
 - [Stack Overflow](https://stackoverflow.com/questions/49699067/property-has-no-initializer-and-is-not-definitely-assigned-in-the-construc) - property has no initializer
 - [Blog](https://blog.logrocket.com/deploying-single-page-angular-apps-to-github-pages/) - angular cli ghpages
 - [Stack Overflow](https://stackoverflow.com/questions/59145704/angular-and-gh-pages-not-loading-specific-images-from-assets-folder) - images didn't load using angular cli ghpages
+- [Stack Overflow](https://stackoverflow.com/questions/56379595/images-are-not-loading-after-deploying-angular-app-on-github-pages) - images not loading
