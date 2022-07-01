@@ -48,17 +48,17 @@ Users should be able to:
 
 ## My process
 
-- [Angular Todo App](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started) -- Did this tutorial to get reintroduce myself to Angular after months away, then decided to use it as a 
+Completed [Angular Todo App Tutorial](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started) to reintroduce myself to Angular after months away, then decided to use it as a 
 base to build this Frontend Mentor challenge.
 
-Sidenote: I last worked on this around December 2021 and never uploaded it.  I don't want to update dependencies since Angular has had some breaking changes since then.  
+Sidenote: I last worked on this around December 2021 and never uploaded it.  I didn't update dependencies.  
 
 ### Built with
 
 - Flexbox
 - CSS Grid
-- [Angular](https://angular.io/) - Angular Framework
-- [Angular Material](https://material.angular.io/) - Angular Material
+- [Angular](https://angular.io/)
+- [Angular Material](https://material.angular.io/) 
 
 ### What I learned
 
